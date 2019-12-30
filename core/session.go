@@ -41,7 +41,7 @@ func (s *Session) Start() {
 	s.InitLogger()
 	s.InitThreads()
 	s.InitSignatures()
-	s.InitGitHubClients()
+	//s.InitGitHubClients()
 	s.InitCsvWriter()
 }
 
