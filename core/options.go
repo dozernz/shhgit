@@ -20,6 +20,7 @@ type Options struct {
 	TempDirectory          *string
 	CsvPath                *string
 	SearchQuery            *string
+	TargetDir            *string
 }
 
 func ParseOptions() (*Options, error) {
@@ -37,6 +38,7 @@ func ParseOptions() (*Options, error) {
 		TempDirectory:          flag.String("temp-directory", filepath.Join(os.TempDir(), Name), "Directory to process and store repositories/matches"),
 		CsvPath:                flag.String("csv-path", "", "CSV file path to log found secrets to. Leave blank to disable"),
 		SearchQuery:            flag.String("search-query", "", "Specify a search string to ignore signatures and filter on files containing this string (regex compatible)"),
+		TargetDir:              flag.String("target-dir", "", "Directory to run the tool over"),
 	}
 
 	flag.Parse()
