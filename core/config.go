@@ -1,11 +1,11 @@
 package core
 
 import (
-	"errors"
+	//"errors"
 	"io/ioutil"
 	"os"
 	"path"
-	"strings"
+	//"strings"
 
 	"gopkg.in/yaml.v3"
 )
@@ -53,9 +53,9 @@ func (c *Config) UnmarshalYAML(unmarshal func(interface{}) error) error {
 		return err
 	}
 
-	if len(c.GitHubAccessTokens) < 1 || strings.TrimSpace(strings.Join(c.GitHubAccessTokens, "")) == "" {
-		return errors.New("You need to provide at least one GitHub Access Token. See https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line")
-	}
+	///if len(c.GitHubAccessTokens) < 1 || strings.TrimSpace(strings.Join(c.GitHubAccessTokens, "")) == "" {
+	//	return errors.New("You need to provide at least one GitHub Access Token. See https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line")
+	//}
 
 	return nil
 }
