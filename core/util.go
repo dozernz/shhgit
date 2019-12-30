@@ -9,6 +9,16 @@ import (
 	"strings"
 )
 
+
+func GetAbs(path string) string {
+    dir,err :=  filepath.Abs(path)
+    if err != nil{
+        return ""
+    }
+
+    return dir
+}
+
 func GetTempDir(suffix string) string {
 	dir := filepath.Join(*session.Options.TempDirectory, suffix)
 
